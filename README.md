@@ -10,7 +10,7 @@ Backend engineer based in Singapore. I build integration services and distribute
 
 | Project | What it is | Stack |
 | --- | --- | --- |
-| [InkWords Trainer](https://github.com/2692341798/InkWords) | Knowledge-training platform that turns repos, PDFs and course packs into structured Obsidian-style knowledge | Go · Gin · PostgreSQL · Redis · RabbitMQ · React |
+| [InkWords Trainer](https://github.com/2692341798/InkWords) | AI learning platform that turns repos, PDFs and course packs into an Obsidian-style knowledge wiki, quizzes you on it, and builds courses from codebases via AST analysis. Multi-stage LLM quality pipeline (draft → score → repair → revise), DeepSeek cache-aware token tracking, 6 Go services on RabbitMQ + SSE | Go · Gin · PostgreSQL · Redis · RabbitMQ · React · DeepSeek |
 | [Load-Balanced Online Judge](https://github.com/2692341798/load-balanced-online-oj) | Distributed OJ with load-balanced Docker compile workers and a namespace/setrlimit sandbox — 7.75 QPS, P99 < 2 s at 12 concurrent judges | C++ · MySQL · Docker · Linux |
 | [Message Queue](https://github.com/2692341798/Message_Queue) | RabbitMQ-inspired AMQP broker: direct/fanout/topic exchanges, durable storage, acks | C++ · Muduo · Protobuf · SQLite |
 
