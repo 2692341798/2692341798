@@ -1,6 +1,6 @@
 ## Hi, I'm Qijun Huang 👋
 
-Backend engineer based in Singapore. I build integration services and distributed systems — currently a software engineer intern at **SendOS**, an AI-native business operating system, where I build the Microsoft 365 connector (OAuth 2.0 + PKCE, Microsoft Graph, governed write actions) in C#/.NET 8.
+Backend engineer based in Singapore. I build integration services and distributed systems — currently a software engineer intern at **SendOS**, an AI-native business operating system, where I build the Microsoft 365 connector in C#/.NET 8: Continuous Access Evaluation, refresh-failure classification by OAuth error code, egress hardening on Microsoft Graph, and agent writes made idempotent via Graph's `transactionId`.
 
 - 🎓 NUS-ISS Graduate Diploma in Systems Analysis (GPA 4.0/5.0) · B.Eng. Software Engineering, East China University of Technology
 - 🔭 Interested in backend platforms, third-party API integration, AI-agent tooling and systems programming
@@ -11,15 +11,11 @@ Backend engineer based in Singapore. I build integration services and distribute
 | Project | What it is | Stack |
 | --- | --- | --- |
 | [InkWords Trainer](https://github.com/2692341798/InkWords) | AI learning platform that turns repos, PDFs and course packs into an Obsidian-style knowledge wiki, quizzes you on it, and builds courses from codebases via AST analysis. Multi-stage LLM quality pipeline (draft → score → repair → revise), DeepSeek cache-aware token tracking, 6 Go services on RabbitMQ + SSE | Go · Gin · PostgreSQL · Redis · RabbitMQ · React · DeepSeek |
-| [Load-Balanced Online Judge](https://github.com/2692341798/load-balanced-online-oj) | Distributed OJ with load-balanced Docker compile workers and a namespace/setrlimit sandbox — 7.75 QPS, P99 < 2 s at 12 concurrent judges | C++ · MySQL · Docker · Linux |
-| [Message Queue](https://github.com/2692341798/Message_Queue) | RabbitMQ-inspired AMQP broker: direct/fanout/topic exchanges, durable storage, acks | C++ · Muduo · Protobuf · SQLite |
+| [Load-Balanced Online Judge](https://github.com/2692341798/load-balanced-online-oj) | Distributed OJ with heartbeat health checks that take failed compile nodes offline and re-admit them, per-test-case failover, C++/Python/Java judging and DeepSeek error explanations; sandbox with RLIMIT_NPROC, privilege drop and wait4 memory-limit detection | C++ · Linux · DeepSeek |
 
 ### Tech
 
-- **Languages:** C# · Go · C++ · Java · Python · TypeScript · SQL
-- **Backend:** .NET 8 / ASP.NET Core · EF Core · Gin · Spring Boot · REST · SSE · OAuth 2.0 / PKCE · JWT · Protobuf
-- **Integrations & AI:** Microsoft Graph · MCP · LLM provider adapters (OpenAI, Anthropic, Amazon Bedrock) · embedding-based semantic retrieval
-- **Data & messaging:** PostgreSQL · pgvector · MySQL · SQLite · Redis · RabbitMQ · AWS SQS · AWS EventBridge
-- **Cloud & DevOps:** Docker · AWS ECS / ECR · GitHub Actions · Keycloak · Linux
-- **Frontend:** Next.js · React · Tailwind CSS · Zustand
-- **Testing:** xUnit · NSubstitute · FsCheck · Testcontainers · WireMock · Vitest
+- **Languages:** C# · Go · C++ · TypeScript · Python · SQL
+- **Integrations & identity:** Microsoft Graph (CAE, `transactionId`, Retry-After) · Entra ID · OAuth token lifecycle · MCP
+- **LLM systems:** DeepSeek API (context caching, token accounting) · multi-stage generation pipelines · Go/TypeScript AST analysis
+- **Systems:** RabbitMQ task queues · SSE streaming · Nginx gateway routing · Linux process sandboxing (setrlimit, privilege drop)
