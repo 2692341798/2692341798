@@ -16,6 +16,10 @@ Backend engineer based in Singapore. I build integration services and distribute
 
 ### Tech
 
-- **Languages:** C# · Go · C++ · Java · Python · TypeScript
-- **Backend:** .NET 8 · Gin · Spring Boot · REST · OAuth 2.0 · Protobuf
-- **Data & infra:** PostgreSQL · MySQL · Redis · RabbitMQ · Docker · Linux · GitHub Actions
+- **Languages:** C# · Go · C++ · Java · Python · TypeScript · SQL
+- **Backend:** .NET 8 / ASP.NET Core · EF Core · Gin · Spring Boot · REST · SSE · OAuth 2.0 / PKCE · JWT · Protobuf
+- **Integrations & AI:** Microsoft Graph · MCP · LLM provider adapters (OpenAI, Anthropic, Amazon Bedrock) · embedding-based semantic retrieval
+- **Data & messaging:** PostgreSQL · pgvector · MySQL · SQLite · Redis · RabbitMQ · AWS SQS · AWS EventBridge
+- **Cloud & DevOps:** Docker · AWS ECS / ECR · GitHub Actions · Keycloak · Linux
+- **Frontend:** Next.js · React · Tailwind CSS · Zustand
+- **Testing:** xUnit · NSubstitute · FsCheck · Testcontainers · WireMock · Vitest
