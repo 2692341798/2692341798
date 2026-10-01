@@ -1,5 +1,4 @@
 ## Hi, I'm Qijun Huang 👋
-[![GitHub Roast score card](https://ghfind.com/api/card/mini/2692341798)](https://ghfind.com/u/2692341798?ref=badge)
 
 Backend engineer based in Singapore. I build integration services and distributed systems — currently a software engineer intern at **SendOS**, an AI-native business operating system, where I build the Microsoft 365 connector (OAuth 2.0 + PKCE, Microsoft Graph, governed write actions) in C#/.NET 8.
 
