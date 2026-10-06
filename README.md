@@ -2,7 +2,7 @@
 
 Backend engineer based in Singapore. I build integration services and distributed systems — currently a software engineer intern at **SendOS**, an AI-native business operating system, where I build the Microsoft 365 connector in C#/.NET 8: Continuous Access Evaluation, refresh-failure classification by OAuth error code, egress hardening on Microsoft Graph, and agent writes made idempotent via Graph's `transactionId`.
 
-- 🎓 NUS-ISS Graduate Diploma in Systems Analysis (GPA 4.0/5.0) · B.Eng. Software Engineering, East China University of Technology
+- 🎓 NUS-ISS Graduate Diploma in Systems Analysis (GPA 3.56/5.0) · B.Eng. Software Engineering, East China University of Technology
 - 🔭 Interested in backend platforms, third-party API integration, AI-agent tooling and systems programming
 - 📫 huangqj73@gmail.com
 
