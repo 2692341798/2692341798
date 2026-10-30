@@ -1,41 +1,53 @@
-## Hi, I'm Qijun Huang 👋
+## Hi, I'm Qijun Huang
 
-Backend engineer based in Singapore, working on AI-agent integrations and distributed systems. I'm a software engineer intern at **SendOS**, where my work spans C#/.NET integration services, OAuth reliability, execution-result verification, and cross-service observability.
+I build backend systems and AI workflows with explicit constraints, verifiable results, and useful failure handling. Based in Singapore; currently a **Software Engineer Intern at SendOS**.
 
-- 🎓 NUS-ISS Graduate Diploma in Systems Analysis (GPA 3.56/5.0) · B.Eng. Software Engineering, East China University of Technology
-- 🔭 Currently building **OnlineJudge for the ECUT Computer Association (东华理工大学计算机协会)**
-- 📫 [LinkedIn](https://www.linkedin.com/in/qijun-huang/) · huangqj73@gmail.com
+[LinkedIn](https://www.linkedin.com/in/qijun-huang/) · [Email](mailto:huangqj73@gmail.com)
 
-### Current work
+### Industry experience
 
 **SendOS — backend and AI-agent engineering**
 
-- Develop Microsoft 365 integration in C#/.NET 8, with attention to OAuth token lifecycle, Continuous Access Evaluation, API failure handling, and safe retry behavior.
-- Work on verifying agent execution outcomes against persisted results, supported by repeatable integration checks.
-- Improve request and operation correlation across services and asynchronous processing so failures can be traced through the system.
+- Develop C#/.NET integration services, including Microsoft 365 OAuth token lifecycle, Continuous Access Evaluation, and API failure handling.
+- Work on agent-execution verification against persisted results, supported by repeatable integration checks.
+- Improve correlation across services and asynchronous processing so an operation can be followed through failures and handoffs.
 
-**[ECUT Computer Association OnlineJudge](https://github.com/DL-Association-for-Computing-Machinery/OnlineJudge) — developer and maintainer**
+### Selected engineering work
 
-Building the technical foundation for a programming practice and campus contest platform:
+**[FoodMind cooking planner](https://github.com/foodmind-team/foodmind-intelligence) — constrained planning with an independent verifier**
 
-- PostgreSQL-backed submission persistence, idempotent receipts, and task leases.
-- Worker authentication with mTLS, lease-scoped material access, integrity checks, and GNU++17 sandbox experiments.
-- Integration tests for worker handover and failure paths; separate Redis/PostgreSQL session-revocation experiments.
-- Reproducible Docker tooling and CI checks for static analysis, race detection, secret scanning, and dependency vulnerabilities.
+Owned the cooking-planner feature across the agent, Spring Boot backend, web and Android clients, and AWS staging delivery.
 
-**Status:** M0 technical experiments. Formal login, the complete training product, and overall M0 acceptance are still in progress; this is not a production deployment.
+- Turn 1–6 recipes into a coordinated timeline with LangGraph and OR-Tools CP-SAT. Keep LLM interpretation separate from deterministic scheduling and safety checks.
+- Optimize completion time, dish holding time, and a task-switching proxy in priority order; retain earlier feasible results when later optimization cannot finish.
+- Verify schedules independently of the solver using task dependencies, timing checks, and sweep-line resource-capacity checks. Distinguish a timeout from proven infeasibility, with bounded repair and confirmation paths.
 
-### Other projects
+**[InkWords](https://github.com/2692341798/InkWords) — evidence-backed learning content**
 
-| Project | Focus | Stack |
-| --- | --- | --- |
-| [InkWords Trainer](https://github.com/2692341798/InkWords) | Learning platform that turns repositories and documents into a knowledge wiki, quizzes, and courses, with multi-stage LLM generation and review | Go · PostgreSQL · Redis · RabbitMQ · React · DeepSeek |
-| [Load-Balanced Online Judge](https://github.com/2692341798/load-balanced-online-oj) | Earlier distributed OJ project exploring compile-node health checks, failover, and Linux process sandboxing | C++ · Linux |
-| [Message Queue](https://github.com/2692341798/Message_Queue) | RabbitMQ-inspired message broker with direct, fanout, and topic exchanges, durable storage, and acknowledgements | C++ · Muduo · Protobuf · SQLite |
+Built a Go-based platform that turns repositories and documents into knowledge pages, quizzes, and courses.
 
-### Tools I work with
+- Validate chapter claims against evidence IDs and require code blocks to match source evidence or lab artifacts. Hard quality-gate failures block chapter assembly.
+- Use staged drafting, review and targeted repair; run long generation and export tasks through RabbitMQ with SSE progress.
+- Track token usage and cache hits, and bound model concurrency to make generation costs and failures observable.
 
-- **Languages:** C# · Go · C++ · TypeScript · Python · SQL
-- **Backend and integrations:** .NET · Microsoft Graph · OAuth · PostgreSQL · Redis · RabbitMQ
-- **Reliability:** structured logging · request correlation · integration testing · Docker · GitHub Actions
-- **Systems and AI:** Linux process isolation · worker orchestration · LLM pipelines · SSE
+**[C++ message broker](https://github.com/2692341798/Message_Queue) — messaging internals**
+
+Implemented direct, fanout and topic routing, acknowledgement tracking, and durable message storage with Muduo, Protobuf and SQLite. Queue data uses length-prefixed records, invalidation and compaction; topic wildcard matching uses dynamic programming.
+
+**[ECUT Computer Association OnlineJudge](https://github.com/DL-Association-for-Computing-Machinery/OnlineJudge) — worker coordination and isolation**
+
+Developing PostgreSQL-backed submissions, idempotent receipts and task leases, with mTLS worker authentication, lease-scoped material access and integrity checks. GNU++17 sandbox experiments and handover/failure-path integration tests support the design.
+
+Status: M0 technical experiments; the complete training product and overall M0 acceptance remain in progress. Not a production deployment.
+
+### Open-source and team contributions
+
+- **[Nango Elasticsearch integration — PR #7759](https://github.com/NangoHQ/nango/pull/7759):** proposed API-key authentication and deployment-specific endpoints. Use the authentication endpoint so index-scoped keys can connect without cluster-monitor privileges. Added setup documentation and validation cases. **PR open; not yet merged.**
+- **[Wellness AI — merged RAG contribution](https://github.com/Terrence129/wellness-app-ai/pull/5):** added SQLite FTS5/BM25 retrieval with content-fingerprint index reuse, rebuild-and-replace indexing, bounded document loading and retrieval failure isolation.
+- **[Earlier load-balanced OJ](https://github.com/2692341798/load-balanced-online-oj):** extended a course project with compile-node health checks and failover, multi-language judging, and Linux resource limits and privilege reduction.
+
+### Background
+
+NUS-ISS Graduate Diploma in Systems Analysis · B.Eng. Software Engineering, East China University of Technology
+
+C#/.NET · Go · Python · C++ · SQL · PostgreSQL · Redis · RabbitMQ · Docker · GitHub Actions
